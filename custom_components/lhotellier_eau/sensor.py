@@ -20,6 +20,7 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from .api import LhotellierData
 from .const import DOMAIN, MANUFACTURER
 from .coordinator import LhotellierConfigEntry, LhotellierCoordinator
+from .statistics import statistic_ids
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -141,4 +142,10 @@ class LhotellierSensor(CoordinatorEntity[LhotellierCoordinator], SensorEntity):
 
     @property
     def extra_state_attributes(self) -> dict[str, Any] | None:
-        return self.entity_description.attr_fn(self.coordinator.data)
+        attrs = self.entity_description.attr_fn(self.coordinator.data)
+        key = self.entity_description.key
+        if key in ("index", "derniere_facture"):
+            # Statistique longue durée avec tout l'historique (tableau Énergie, cartes)
+            consumption_id, cost_id = statistic_ids(str(self.coordinator.config_entry.unique_id))
+            attrs = {**(attrs or {}), "statistique": consumption_id if key == "index" else cost_id}
+        return attrs

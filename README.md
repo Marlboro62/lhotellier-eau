@@ -31,7 +31,14 @@ Si le mot de passe change, Home Assistant vous propose de le saisir à nouveau.
 
 ### Tableau Énergie
 
-**Paramètres › Tableaux de bord › Énergie › Consommation d'eau › Ajouter une source d'eau**, puis choisissez le capteur **Index compteur**.
+L'intégration importe tous les relevés et toutes les factures de l'espace client dans les statistiques longue durée de Home Assistant, y compris les années passées :
+
+- **L'Hotellier Eau – Consommation** : consommation en m³, comptée à la date de chaque relevé ;
+- **L'Hotellier Eau – Factures** : montants facturés en €, comptés à la date de chaque facture.
+
+**Paramètres › Tableaux de bord › Énergie › Consommation d'eau › Ajouter une source d'eau**, puis choisissez la statistique **L'Hotellier Eau – Consommation**. Pour le coût, choisissez « Utiliser une entité suivant les coûts totaux » et la statistique **L'Hotellier Eau – Factures**.
+
+Les identifiants des statistiques sont dans l'attribut `statistique` des capteurs **Index compteur** et **Dernière facture**.
 
 ## Support
 
