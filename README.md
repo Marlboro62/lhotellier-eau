@@ -17,6 +17,34 @@ Intégration Home Assistant pour l'**espace client L'Hotellier Eau** (`servicecl
 
 Les données sont mises à jour toutes les 12 heures. Les relevés de compteur sont peu fréquents : l'index ne change qu'à chaque nouveau relevé.
 
+## Carte
+
+L'intégration fournit sa carte, dans le même style que les cartes Enedis Linky New et Gazpar. Elle est chargée automatiquement : aucune ressource à ajouter.
+
+```yaml
+type: custom:lhotellier-eau-card
+```
+
+![Carte Eau L'Hotellier (valeurs fictives)](images/carte-eau.png)
+
+- **Dernier relevé** : consommation de la période, évolution par rapport au relevé précédent, index du compteur.
+- **Tuiles** : moyenne par jour (en litres), moyenne par an, dernière facture, total facturé dans l'année.
+- **Graphique** des relevés : un clic sur un relevé donne son détail (période, litres par jour, index de début et de fin).
+- **Factures** : les dernières factures, les avoirs en vert.
+
+Les capteurs sont trouvés seuls. Options (toutes dans l'éditeur visuel) :
+
+| Option | Par défaut | Description |
+| --- | --- | --- |
+| `entity` | trouvé seul | capteur **Index compteur** |
+| `bill_entity` | trouvé seul | capteur **Dernière facture** |
+| `title` | `Eau` | titre de la carte |
+| `reads` | `6` | relevés dans le graphique (3, 6 ou 10) |
+| `show_bills` | `true` | liste des factures |
+| `bills` | `4` | factures affichées (2, 4 ou 8) |
+| `theme` | `v2` | `v2` (bleu nuit), `auto` (clair ou sombre selon Home Assistant), `ha` (thème Home Assistant) |
+| `font_size` | `100` | taille du texte, en % |
+
 ## Installation
 
 1. **Paramètres › Marketplace** (ou HACS avant Home Assistant 2026.11) › menu ⋮ › **Dépôts personnalisés**.
