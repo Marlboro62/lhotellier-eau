@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Agence en ligne L'Hotellier Eau",
+        "description": "Identifiants de votre espace client serviceclients.lhotellier-eau.fr.",
+        "data": {
+          "username": "Identifiant (adresse e-mail)",
+          "password": "Mot de passe"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reconnexion nécessaire",
+        "description": "Le mot de passe de {username} a été refusé. Saisissez le nouveau mot de passe.",
+        "data": { "password": "Mot de passe" }
+      }
+    },
+    "error": {
+      "invalid_auth": "Identifiant ou mot de passe incorrect.",
+      "cannot_connect": "Impossible de joindre l'espace client.",
+      "unknown": "Erreur inattendue, voir les journaux."
+    },
+    "abort": {
+      "already_configured": "Cet abonnement est déjà configuré.",
+      "reauth_successful": "Reconnexion réussie."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "index": { "name": "Index compteur" },
+      "derniere_consommation": { "name": "Dernière consommation relevée" },
+      "dernier_releve": { "name": "Dernier relevé" },
+      "derniere_facture": { "name": "Dernière facture" },
+      "date_derniere_facture": { "name": "Date dernière facture" },
+      "mode_paiement": { "name": "Mode de paiement" }
+    }
+  }
+}

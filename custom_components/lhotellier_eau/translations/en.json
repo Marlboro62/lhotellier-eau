@@ -1,0 +1,35 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "L'Hotellier Eau online account",
+        "description": "Credentials for your serviceclients.lhotellier-eau.fr account.",
+        "data": { "username": "Username (e-mail)", "password": "Password" }
+      },
+      "reauth_confirm": {
+        "title": "Re-authentication required",
+        "description": "The password for {username} was rejected. Enter the new password.",
+        "data": { "password": "Password" }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid username or password.",
+      "cannot_connect": "Unable to reach the customer portal.",
+      "unknown": "Unexpected error, check the logs."
+    },
+    "abort": {
+      "already_configured": "This subscription is already configured.",
+      "reauth_successful": "Re-authentication successful."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "index": { "name": "Meter index" },
+      "derniere_consommation": { "name": "Last read consumption" },
+      "dernier_releve": { "name": "Last meter reading" },
+      "derniere_facture": { "name": "Last bill" },
+      "date_derniere_facture": { "name": "Last bill date" },
+      "mode_paiement": { "name": "Payment method" }
+    }
+  }
+}
