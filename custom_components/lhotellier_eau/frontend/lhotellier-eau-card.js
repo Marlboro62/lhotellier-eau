@@ -9,7 +9,7 @@
  * bill_entity: sensor.compteur_d_eau_derniere_facture    (trouvé seul si absent)
  */
 
-const CARD_VERSION = "1.1.0-beta.2";
+const CARD_VERSION = "1.1.0";
 
 /* ---------------------------------------------------------------- données */
 
