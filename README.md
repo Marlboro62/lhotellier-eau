@@ -47,12 +47,14 @@ Les capteurs sont trouvés seuls. Options (toutes dans l'éditeur visuel) :
 
 ## Installation
 
+L'intégration fait partie du catalogue par défaut de HACS : aucun dépôt à ajouter.
+
 [![Ouvrir dans Home Assistant](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Marlboro62&repository=lhotellier-eau&category=integration)
 
 1. Ouvrez **Paramètres › Marketplace** (ou HACS avant Home Assistant 2026.11), ou utilisez le bouton ci-dessus.
 2. Cherchez **L'Hotellier Eau**, installez-la, puis redémarrez Home Assistant.
 
-Si l'intégration n'apparaît pas dans la recherche, ajoutez-la comme dépôt personnalisé : menu ⋮ › **Dépôts personnalisés**, adresse `https://github.com/Marlboro62/lhotellier-eau`, catégorie **Intégration**, puis reprenez l'étape 2.
+Si l'intégration n'apparaît pas encore dans la recherche, ajoutez-la comme dépôt personnalisé : menu ⋮ › **Dépôts personnalisés**, adresse `https://github.com/Marlboro62/lhotellier-eau`, catégorie **Intégration**, puis reprenez l'étape 2.
 
 ## Configuration
 
